@@ -1,11 +1,10 @@
 package com.cts.wishlist.repository;
 
-import com.cts.wishlist.model.Track;
+import com.cts.wishlist.model.Wishlist;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 @Repository
-public interface WishListRepository extends MongoRepository<Track,String> {
-    Optional<Track> findById(String id);
+public interface WishListRepository extends MongoRepository<Wishlist,String> {
 }
