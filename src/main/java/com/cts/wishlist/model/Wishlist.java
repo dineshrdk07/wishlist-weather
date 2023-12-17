@@ -8,7 +8,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Wishlist {
     @Id
-    private String id;
-    private String trackName;
-    private String artistName;
+    private String userId;
+    private String city;
 }

@@ -20,17 +20,12 @@ public class WishListService {
         return wishListRepository.save(wishlist);
     }
     @Cacheable("wishlist")
-    public Wishlist getTrack(String id){
-         Optional<Wishlist> wishlist = wishListRepository.findById(id);
-         if(wishlist.isPresent()){
-             log.info("value from db");
-             return wishlist.get();
-         }
-         return null;
+    public Wishlist getCity(String userId){
+        return wishListRepository.findByUserId(userId);
     }
-    public void deleteTrack(String id){
+    public void deleteCity(String id){
         log.info("track deleted "+ id);
-        wishListRepository.deleteById(id);
+        wishListRepository.deleteByUserId(id);
     }
 
 }

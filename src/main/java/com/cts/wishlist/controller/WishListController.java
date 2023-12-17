@@ -17,12 +17,12 @@ public class WishListController {
             return wishListService.saveWishList(wishlist);
         }
 
-        @GetMapping("/search/{id}")
-        public Wishlist getTrack(@PathVariable("id") String id){
-            return wishListService.getTrack(id);
+        @GetMapping("/search/{userId}")
+        public Wishlist getTrack(@PathVariable("userId") String userId){
+            return wishListService.getCity(userId);
         }
-        @DeleteMapping("/delete/{id}")
-        public void deleteTrack(@PathVariable("id") String id){
-             wishListService.deleteTrack(id);
+        @DeleteMapping("/delete/{userId}")
+        public void deleteTrack(@PathVariable("userId") String id){
+             wishListService.deleteCity(id);
         }
 }
